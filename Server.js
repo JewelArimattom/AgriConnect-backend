@@ -516,8 +516,11 @@ app.get('/api/tools/:id', async (req, res) => {
   }
 });
 
-app.get('/', (req, res) => {
-  res.send('AgriConnect API');
+app.get('/' , (req, res) => {
+  res.send("Welcome to AgriConnect");
 })
+
 // --- Server Listener ---
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
